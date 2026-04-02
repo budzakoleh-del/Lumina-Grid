@@ -338,10 +338,10 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('home'); 
   
   const [images, setImages] = useState({ 
-    hero: "/hero.jpg",
-    solar: "/solar.jpg",
-    pump: "/pump.jpg",
-    contact: "/contact.jpg"
+    hero: "/hero.png",
+    solar: "/solar.png",
+    pump: "/pump.png",
+    contact: "/contact.png"
   });
 
   const t = translations[lang];
