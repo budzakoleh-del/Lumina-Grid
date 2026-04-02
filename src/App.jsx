@@ -130,7 +130,7 @@ const translations = {
       pump: { t: "केवल हीट पंप", s: "£900/वर्ष तक", d: "गैस की तुलना में 3-4 गुना अधिक कुशल।" },
       bundle: { t: "ल्यूमिना बंडल", s: "£2,800/वर्ष तक", d: "सौर + पंप + बैटरी। 90% ग्रिड स्वतंत्रता।" }
     },
-    contact: { title: "अपना ग्रिड डिजाइन करें।", desc: "हमसे जुड़ने का तरीका चुनें।", call: "हमें कॉल करें", email: "ईमेल करें", wa: "WhatsApp", chat: "त्वरित चैट", hours: "सोम-शुक्र, 8-6", office: "कैनरी वार्ф, लंदन", formTitle: "संदेश भेजें", name: "पूरा नाम", postcode: "पोस्टकोड", message: "संदेश", send: "अनुरोध भेजें" },
+    contact: { title: "अपना ग्रिड डिजाइन करें।", desc: "हमसे जुड़ने का तरीका चुनें।", call: "हमें कॉल करें", email: "ईमेल करें", wa: "WhatsApp", chat: "त्वरित चैट", hours: "सोम-शुक्र, 8-6", office: "कैनरी वार्फ, लंदन", formTitle: "संदेश भेजें", name: "पूरा नाम", postcode: "पोस्टकोड", message: "संदेश", send: "अनुरोध भेजें" },
     alert: { status: "अनुदान स्थिति: सक्रिय", desc: "£7,500 अनुदान अभी भी उपलब्ध है।" }
   },
   ru: {
@@ -334,8 +334,9 @@ const GrantsPage = ({ t, setCurrentPage }) => {
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [lang, setLang] = useState('en'); // Англійська тепер головна
+  const [lang, setLang] = useState('en'); 
   const [currentPage, setCurrentPage] = useState('home'); 
+  
   const [images, setImages] = useState({ 
     hero: "/hero.jpg",
     solar: "/solar.jpg",
@@ -343,45 +344,16 @@ export default function App() {
     contact: "/contact.jpg"
   });
 
-  const apiKey = ""; 
   const t = translations[lang];
 
   useEffect(() => {
     const hour = new Date().getHours();
     setIsDarkMode(hour >= 18 || hour <= 6);
-
-    const generateAllImages = async () => {
-      const prompts = {
-        hero: "Hyper-realistic 4K architectural photo of a Victorian London townhouse at dusk, integrated black solar panels on the roof, luxury aesthetic.",
-        solar: "Close-up detail of premium matte black solar panels on a slate London roof, raindrops, soft lighting.",
-        pump: "Modern air source heat pump unit in a manicured London garden, London brick wall background.",
-        bundle: "Clean white modern basement with a smart battery storage system and high-tech interface.",
-        calculator: "Aerial drone view of a leafy London suburb with many houses having solar panels.",
-        contact: "Blurry professional background of a modern glass office in Canary Wharf at night."
-      };
-
-      try {
-        const fetchImage = async (prompt) => {
-          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`, {
-            method: 'POST',
-            body: JSON.stringify({ instances: [{ prompt }], parameters: { sampleCount: 1 } })
-          });
-          const data = await res.json();
-          return `data:image/png;base64,${data.predictions?.[0]?.bytesBase64Encoded}`;
-        };
-        const results = {};
-        for (const [key, prompt] of Object.entries(prompts)) {
-          results[key] = await fetchImage(prompt);
-        }
-        setImages(results);
-      } catch (err) { console.error("Image generation failed", err); }
-    };
-    generateAllImages();
   }, []);
 
   return (
     <div className={isDarkMode ? 'dark' : ''}>
-      <div className="bg-white dark:bg-slate-950 font-sans selection:bg-blue-600 selection:text-white transition-colors duration-1000">
+      <div className="bg-white dark:bg-slate-950 font-sans selection:bg-blue-600 selection:text-white transition-colors duration-1000 min-h-screen">
         
         <Navbar isDarkMode={isDarkMode} lang={lang} setLang={setLang} t={t} currentPage={currentPage} setCurrentPage={setCurrentPage} />
         
@@ -390,7 +362,7 @@ export default function App() {
             <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
               <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/40 to-transparent z-10" />
-                {images.hero && <img src={images.hero} alt="London Solar Home" className="w-full h-full object-cover scale-105 animate-slow-zoom" />}
+                <img src={images.hero} alt="London Solar Home" className="w-full h-full object-cover scale-105 animate-slow-zoom" />
               </div>
               <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="max-w-2xl">
@@ -422,7 +394,7 @@ export default function App() {
                      </button>
                    </div>
                    <div className="rounded-3xl overflow-hidden shadow-2xl aspect-video bg-slate-900">
-                     {images.solar && <img src={images.solar} alt="Solar" className="w-full h-full object-cover" />}
+                     <img src={images.solar} alt="Solar" className="w-full h-full object-cover" />
                    </div>
                  </div>
               </div>
@@ -432,7 +404,7 @@ export default function App() {
               <div className="max-w-7xl mx-auto px-4">
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                    <div className="rounded-3xl overflow-hidden shadow-2xl aspect-video bg-slate-900 order-2 md:order-1">
-                     {images.pump && <img src={images.pump} alt="Heat Pump" className="w-full h-full object-cover" />}
+                     <img src={images.pump} alt="Heat Pump" className="w-full h-full object-cover" />
                    </div>
                    <div className="space-y-6 order-1 md:order-2">
                      <h2 className="text-4xl font-black dark:text-white">{t.services.s2.t}</h2>
@@ -447,7 +419,7 @@ export default function App() {
 
             <section id="contact" className="py-24 relative overflow-hidden">
               <div className="absolute inset-0 z-0 opacity-10 grayscale">
-                 {images.contact && <img src={images.contact} alt="Office" className="w-full h-full object-cover" />}
+                 <img src={images.contact} alt="Office" className="w-full h-full object-cover" />
               </div>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
