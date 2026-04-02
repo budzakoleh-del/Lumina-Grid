@@ -448,7 +448,7 @@ const GrantsPage = ({ t, setCurrentPage }) => {
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [lang, setLang] = useState('uk'); // Укр за замовчуванням за вашим проханням раніше (можете змінити на 'en')
+  const [lang, setLang] = useState('en'); // Англійська як основна
   const [currentPage, setCurrentPage] = useState('home'); 
   
   const [images, setImages] = useState({ 
