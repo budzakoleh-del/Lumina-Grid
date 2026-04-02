@@ -212,6 +212,7 @@ const Navbar = ({ isDarkMode, lang, setLang, t, currentPage, setCurrentPage }) =
         <div className="flex justify-between items-center">
           <button onClick={() => setCurrentPage('home')}><Logo /></button>
           
+          {/* Десктопне меню */}
           <div className="hidden md:flex space-x-6 items-center font-bold text-[10px] uppercase tracking-widest">
             {navItems.map((item, idx) => (
               <button 
@@ -244,11 +245,49 @@ const Navbar = ({ isDarkMode, lang, setLang, t, currentPage, setCurrentPage }) =
             </div>
           </div>
 
+          {/* Кнопка відкриття мобільного меню */}
           <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className={isDarkMode || (!scrolled && currentPage === 'home') ? 'text-white' : 'text-slate-900'}>{isOpen ? <X /> : <Menu />}</button>
+            <button onClick={() => setIsOpen(!isOpen)} className={isDarkMode || (!scrolled && currentPage === 'home') ? 'text-white' : 'text-slate-900'}>
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Мобільне меню (яке випадає) */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-950 px-4 py-6 border-b border-slate-100 dark:border-slate-800 flex flex-col items-center shadow-2xl">
+          {navItems.map((item, idx) => (
+            <button 
+              key={idx} 
+              onClick={() => { 
+                setIsOpen(false); 
+                if (item.type === 'page') setCurrentPage(item.id); 
+                else { 
+                  setCurrentPage('home'); 
+                  setTimeout(() => document.getElementById(item.target)?.scrollIntoView({behavior:'smooth'}), 100); 
+                } 
+              }} 
+              className="w-full py-4 text-sm font-bold uppercase tracking-widest dark:text-white hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
+            >
+              {item.label}
+            </button>
+          ))}
+          
+          {/* Вибір мови в мобільному меню */}
+          <div className="w-full mt-4 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap justify-center gap-3">
+            {languages.map((l) => (
+              <button 
+                key={l.code} 
+                onClick={() => { setLang(l.code); setIsOpen(false); }} 
+                className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${lang === l.code ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'}`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
