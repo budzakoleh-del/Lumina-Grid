@@ -20,7 +20,7 @@ import {
 const translations = {
   en: {
     nav: { solar: "Solar", pumps: "Heat Pumps", grants: "Grants", savings: "Savings", contact: "Contact" },
-    hero: { badge: "2026 Future-Proofing London", title: "Power Your Home for ", accent: "Near-Zero", cost: " Cost.", desc: "Custom solar and heating solutions for London. We handle all UK government grants from start to finish.", consultBtn: "Book Free Consultation", casesBtn: "View Case Studies" },
+    hero: { badge: "Expert Solar & Heat Pump Installation", title: "Power Your Home for ", accent: "Near-Zero", cost: " Cost.", desc: "Custom solar and heating solutions for London. We handle all UK government grants from start to finish.", consultBtn: "Book Free Consultation", casesBtn: "View Case Studies" },
     services: {
       s1: { t: "Solar Excellence", d: "Premium Tier-1 PV panels engineered specifically for London's variable daylight cycles to maximize energy yield." },
       s2: { t: "Heat Pump Innovation", d: "Advanced air-source technology providing ultra-quiet, carbon-neutral heating even in sub-zero temperatures." },
@@ -49,7 +49,7 @@ const translations = {
   },
   pl: {
     nav: { solar: "Panele Słoneczne", pumps: "Pompy Ciepła", grants: "Dotacje", savings: "Oszczędności", contact: "Kontakt" },
-    hero: { badge: "2026 Przyszłość Londynu", title: "Zasilaj dom za ", accent: "prawie zero", cost: " funtów.", desc: "Indywidualne rozwiązania solarne i grzewcze dla Londynu. Obsługujemy wszystkie brytyjskie dotacje rządowe od A do Z.", consultBtn: "Bezpłatna Konsultacja", casesBtn: "Zobacz Realizacje" },
+    hero: { badge: "Ekspercki montaż fotowoltaiki i pomp ciepła", title: "Zasilaj dom za ", accent: "prawie zero", cost: " funtów.", desc: "Indywidualne rozwiązania solarne i grzewcze dla Londynu. Obsługujemy wszystkie brytyjskie dotacje rządowe od A do Z.", consultBtn: "Bezpłatna Konsultacja", casesBtn: "Zobacz Realizacje" },
     services: {
       s1: { t: "Doskonałość Solarna", d: "Panele PV klasy premium Tier-1 zaprojektowane specjalnie dla zmiennego oświetlenia Londynu, aby zmaksymalizować zyski." },
       s2: { t: "Innowacyjne Pompy Ciepła", d: "Zaawansowana technologia powietrzna zapewniająca ciche, neutralne dla klimatu ogrzewanie nawet przy ujemnych temperaturach." },
@@ -78,7 +78,7 @@ const translations = {
   },
   uk: {
     nav: { solar: "Сонячні панелі", pumps: "Теплові насоси", grants: "Гранти", savings: "Економія", contact: "Контакти" },
-    hero: { badge: "2026 Майбутнє Лондона", title: "Живіть з ", accent: "майже нульовими", cost: " витратами.", desc: "Індивідуальні рішення для Лондона. Ми беремо на себе оформлення всіх державних грантів Великобританії.", consultBtn: "Записатися на консультацію", casesBtn: "Наші кейси" },
+    hero: { badge: "Експертний монтаж сонячних панелей та теплових насосів", title: "Живіть з ", accent: "майже нульовими", cost: " витратами.", desc: "Індивідуальні рішення для Лондона. Ми беремо на себе оформлення всіх державних грантів Великобританії.", consultBtn: "Записатися на консультацію", casesBtn: "Наші кейси" },
     services: {
       s1: { t: "Експертна фотовольтаїка", d: "Високопродуктивні панелі класу Tier-1, спроектовані спеціально для мінливого світлового дня Лондона." },
       s2: { t: "Технологія теплових насосів", d: "Передова технологія повітряного опалення: безшумна робота та енергонезалежність." },
@@ -107,7 +107,7 @@ const translations = {
   },
   hi: {
     nav: { solar: "सौर ऊर्जा", pumps: "हीट पंप", grants: "अनुदान", savings: "बचत", contact: "संपर्क" },
-    hero: { badge: "2026 लंदन का भविष्य", title: "अपने घर को ", accent: "लगभग शून्य", cost: " लागत पर चलाएं।", desc: "लंदन के लिए कस्टम सौर और हीटिंग समाधान। हम सभी यूके सरकारी अनुदानों को संभालते हैं।", consultBtn: "मुफ्त परामर्श बुक करें", casesBtn: "केस स्टडीज देखें" },
+    hero: { badge: "विशेषज्ञ सौर और हीट पंप स्थापना", title: "अपने घर को ", accent: "लगभग शून्य", cost: " लागत पर चलाएं।", desc: "लंदन के लिए कस्टम सौर और हीटिंग समाधान। हम सभी यूके सरकारी अनुदानों को संभालते हैं।", consultBtn: "मुफ्त परामर्श बुक करें", casesBtn: "केस स्टडीज देखें" },
     services: {
       s1: { t: "सोलर मास्टरी", d: "लंदन की रोशनी की स्थिति के लिए अनुकूलित।" },
       s2: { t: "हीट पंप तकनीक", d: "शांत और शक्तिशाली हीटिंग।" },
@@ -135,7 +135,7 @@ const translations = {
   },
   ru: {
     nav: { solar: "Солнечные панели", pumps: "Тепловые насосы", grants: "Гранты", savings: "Экономия", contact: "Контакты" },
-    hero: { badge: "2026 Будущее Лондона", title: "Энергия для дома по ", accent: "почти нулевой", cost: " цене.", desc: "Индивидуальные решения для Лондона. Мы берем на себя оформление всех госсубсидий Великобритании.", consultBtn: "Консультация", casesBtn: "Кейсы" },
+    hero: { badge: "Экспертный монтаж солнечных панелей и тепловых насосов", title: "Энергия для дома по ", accent: "почти нулевой", cost: " цене.", desc: "Индивидуальные решения для Лондона. Мы берем на себя оформление всех госсубсидий Великобритании.", consultBtn: "Консультация", casesBtn: "Кейсы" },
     services: {
       s1: { t: "Экспертная фотовольтаика", d: "Высокопроизводительные панели Tier-1, разработанные специально для переменчивого светового дня Лондона." },
       s2: { t: "Инновационное тепло", d: "Продвинутые воздушные насосы: бесшумная работа и полная энергоэффективность." },
@@ -212,7 +212,6 @@ const Navbar = ({ isDarkMode, lang, setLang, t, currentPage, setCurrentPage }) =
         <div className="flex justify-between items-center">
           <button onClick={() => setCurrentPage('home')}><Logo /></button>
           
-          {/* Десктопне меню */}
           <div className="hidden md:flex space-x-6 items-center font-bold text-[10px] uppercase tracking-widest">
             {navItems.map((item, idx) => (
               <button 
@@ -245,49 +244,11 @@ const Navbar = ({ isDarkMode, lang, setLang, t, currentPage, setCurrentPage }) =
             </div>
           </div>
 
-          {/* Кнопка відкриття мобільного меню */}
           <div className="md:hidden flex items-center">
-            <button onClick={() => setIsOpen(!isOpen)} className={isDarkMode || (!scrolled && currentPage === 'home') ? 'text-white' : 'text-slate-900'}>
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <button onClick={() => setIsOpen(!isOpen)} className={isDarkMode || (!scrolled && currentPage === 'home') ? 'text-white' : 'text-slate-900'}>{isOpen ? <X /> : <Menu />}</button>
           </div>
         </div>
       </div>
-
-      {/* Мобільне меню (яке випадає) */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-950 px-4 py-6 border-b border-slate-100 dark:border-slate-800 flex flex-col items-center shadow-2xl">
-          {navItems.map((item, idx) => (
-            <button 
-              key={idx} 
-              onClick={() => { 
-                setIsOpen(false); 
-                if (item.type === 'page') setCurrentPage(item.id); 
-                else { 
-                  setCurrentPage('home'); 
-                  setTimeout(() => document.getElementById(item.target)?.scrollIntoView({behavior:'smooth'}), 100); 
-                } 
-              }} 
-              className="w-full py-4 text-sm font-bold uppercase tracking-widest dark:text-white hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors"
-            >
-              {item.label}
-            </button>
-          ))}
-          
-          {/* Вибір мови в мобільному меню */}
-          <div className="w-full mt-4 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap justify-center gap-3">
-            {languages.map((l) => (
-              <button 
-                key={l.code} 
-                onClick={() => { setLang(l.code); setIsOpen(false); }} 
-                className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${lang === l.code ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'}`}
-              >
-                {l.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
     </nav>
   );
 };
